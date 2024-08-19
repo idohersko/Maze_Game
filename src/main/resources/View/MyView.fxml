@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+   <AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(/ImagesFXML/HomeScene.PNG); -fx-background-size: 100% 100%;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+
+      <children>
+         <Button fx:id="button" layoutX="436.0" layoutY="337.0" mnemonicParsing="false" onAction="#Start" prefHeight="29.0" prefWidth="103.0" text="Start" textAlignment="JUSTIFY" textFill="#ff9c40" textOverrun="WORD_ELLIPSIS">
+            <font>
+               <Font name="David" size="20.0" />
+            </font>
+         </Button>
+      </children></AnchorPane>
+

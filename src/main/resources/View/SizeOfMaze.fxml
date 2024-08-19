@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SizeOfMazeController">
+   <children>
+      <MenuBar id="menuBar" prefHeight="26.0" prefWidth="601.0">
+         <menus>
+            <Menu disable="true" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Load" />
+               </items>
+            </Menu>
+            <Menu fx:id="Options" text="Options">
+               <Menu fx:id="Properties" text="Properties">
+                  <Menu text="Choose your Solving Algorithm">
+                     <CheckMenuItem fx:id="DepthFirstSearch" onAction="#solverDepthFirstSearch" text="DepthFirstSearch" />
+                     <CheckMenuItem fx:id="BreathFirstSearch" onAction="#solverBreadthFirstSearch" text="BreathFirstSearch" />
+                     <CheckMenuItem fx:id="BestFirstSearch" onAction="#solverBestFirstSearch" text="BestFirstSearch" />
+                  </Menu>
+                  <Menu text="Choose your Generator Algorithm">
+                     <CheckMenuItem fx:id="EmptyMazeGenerator" onAction="#generatorEmptyMazeGenerator" text="EmptyMazeGenerator" />
+                     <CheckMenuItem fx:id="SimpleMazeGenerator" onAction="#generatorSimpleMazeGenerator" text="SimpleMazeGenerator" />
+                     <CheckMenuItem fx:id="MyMazeGenerator" onAction="#generatorMyMazeGenerator" text="MyMazeGenerator" />
+                  </Menu>
+                  <Menu text="Number Of Threads">
+                     <MenuItem fx:id="threadPool" onAction="#ThreadPool" />
+                  </Menu>
+               </Menu>
+               <RadioMenuItem fx:id="menu_Options_Mute" disable="false" mnemonicParsing="false" onAction="#SetMute" text="Mute" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+               <items>
+                  <MenuItem id="goHome" mnemonicParsing="false" onAction="#Home" text="Go Home" />
+                  <MenuItem id="exitTheGame" mnemonicParsing="false" onAction="#Exit" text="Exit the Game" />
+               </items>
+            </Menu>
+            <Menu disable="true" mnemonicParsing="false" text="Help" />
+            <Menu mnemonicParsing="false" text="About">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#About" text="Do you want to know more?" />
+               </items></Menu>
+            <Menu id="showSolutionMenu" disable="true" mnemonicParsing="false" text="Show Solution">
+               <items>
+                  <MenuItem id="showSolutionItem" mnemonicParsing="false" onAction="#ShowSolution" text="Show The Solution Path" />
+               </items></Menu>
+            <Menu disable="true" mnemonicParsing="false" text="Reset">
+               <items>
+                  <MenuItem id="returnToSart" mnemonicParsing="false" onAction="#Reset" text="Return to the start position" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+
+      <TextField fx:id="textField_mazeRows" layoutX="377.0" layoutY="108.0" onKeyTyped="#CheckKeyNumRow" prefHeight="48.0" prefWidth="69.0" />
+      <TextField fx:id="textField_mazeCols" layoutX="377.0" layoutY="218.0" onKeyTyped="#CheckKeyNumCol" prefHeight="48.0" prefWidth="69.0" />
+      <ToggleButton fx:id="buttonStartGame" layoutX="89.0" layoutY="298.0" mnemonicParsing="false" onAction="#StartGame" prefHeight="66.0" prefWidth="401.0" text="Start Game" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
+      <Label fx:id="labelRow" layoutX="133.0" layoutY="100.0" prefHeight="66.0" prefWidth="206.0" text="Enter Row number here : " />
+      <Label fx:id="labelCol" layoutX="133.0" layoutY="209.0" prefHeight="66.0" prefWidth="206.0" text="Enter column number here :" />
+   </children>
+</AnchorPane>

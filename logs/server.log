@@ -1,0 +1,9 @@
+2021.06.18 00:03:15.198 INFO  Model.MyModel - server port : 5400
+2021.06.18 00:03:15.206 INFO  Model.MyModel - Maze generated, maze: rows: 5 columns: 5
+2021.06.18 00:03:25.573 INFO  Model.MyModel - Maze Solved Succesfully!
+2021.06.18 00:04:44.283 INFO  Model.MyModel - server port : 5400
+2021.06.18 00:04:44.293 INFO  Model.MyModel - Maze generated, maze: rows: 5 columns: 5
+2021.06.18 00:05:15.723 INFO  Model.MyModel - server port : 5400
+2021.06.18 00:05:15.724 INFO  Model.MyModel - Maze generated, maze: rows: 5 columns: 5
+2021.06.18 00:37:07.625 INFO  Model.MyModel - server port : 5400
+2021.06.18 00:37:07.632 INFO  Model.MyModel - Maze generated, maze: rows: 5 columns: 5

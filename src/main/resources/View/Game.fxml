@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import View.MazeDisplayer?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyPressed" onScroll="#setOnScroll" prefHeight="450.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GameController">
+    <children>
+        <MazeDisplayer fx:id="mazeDisplayer" height="431.0" layoutY="26.0" onMouseClicked="#mouseClicked" onMouseDragged="#mouseDragged" onScroll="#setOnScroll" width="757.0" />
+
+        <Button id="ShowSolution" disable="true" layoutX="729.0" layoutY="1.0" mnemonicParsing="false" onAction="#ShowSolution" prefHeight="26.0" prefWidth="22.0" text="Show Solution" visible="false" />
+        <MenuBar id="menuBar" layoutX="-3.0" layoutY="1.0" prefHeight="26.0" prefWidth="763.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#New" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#Save" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#Load" text="Load" />
+                    </items>
+                </Menu>
+                <Menu fx:id="Options" disable="false" text="Options">
+                    <Menu fx:id="Properties" disable="true" text="Properties">
+                        <Menu text="Choose your Solving Algorithm">
+                            <CheckMenuItem fx:id="DepthFirstSearch" onAction="#solverDepthFirstSearch" text="DepthFirstSearch" />
+                            <CheckMenuItem fx:id="BreathFirstSearch" onAction="#solverBreadthFirstSearch" text="BreathFirstSearch" />
+                            <CheckMenuItem fx:id="BestFirstSearch" onAction="#solverBestFirstSearch" text="BestFirstSearch" />
+                        </Menu>
+                        <Menu text="Choose your Generator Algorithm">
+                            <CheckMenuItem fx:id="EmptyMazeGenerator" onAction="#generatorEmptyMazeGenerator" text="EmptyMazeGenerator" />
+                            <CheckMenuItem fx:id="SimpleMazeGenerator" onAction="#generatorSimpleMazeGenerator" text="SimpleMazeGenerator" />
+                            <CheckMenuItem fx:id="MyMazeGenerator" onAction="#generatorMyMazeGenerator" text="MyMazeGenerator" />
+                        </Menu>
+                        <Menu text="Number Of Threads">
+                            <MenuItem fx:id="threadPool" onAction="#ThreadPool" />
+                        </Menu>
+                    </Menu>
+                    <RadioMenuItem fx:id="menu_Options_Mute" mnemonicParsing="false" onAction="#SetMute" text="Mute" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exit">
+                    <items>
+                        <MenuItem id="goHome" mnemonicParsing="false" onAction="#Home" text="Go Home" />
+                        <MenuItem id="exitTheGame" mnemonicParsing="false" onAction="#Exit" text="Exit the Game" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Help" text="Do you need some help?" />
+                    </items>
+                </Menu>
+                <Menu disable="true" mnemonicParsing="false" text="About" />
+                <Menu id="showSolutionMenu" mnemonicParsing="false" text="Show Solution">
+                    <items>
+                        <MenuItem id="showSolutionItem" mnemonicParsing="false" onAction="#ShowSolution" text="Show The Solution Path" />
+                    </items></Menu>
+                <Menu mnemonicParsing="false" text="Reset">
+                    <items>
+                        <MenuItem id="returnToSart" mnemonicParsing="false" onAction="#Reset" text="Return to the start position" />
+                    </items></Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
