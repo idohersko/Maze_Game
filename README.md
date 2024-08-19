@@ -61,6 +61,4 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 - **Noa Magrisso** - [NoaMagrisso](https://github.com/NoaMagrisso)
 - **Ido Hersko** - [idohersko](https://github.com/idohersko)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
