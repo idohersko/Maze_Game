@@ -1,6 +1,6 @@
 # Tom & Jerry Maze Game
 
-By this project my project partner [`Ido Hersko`](https://github.com/idohersko/) and I implemented a maze game, as we asked to do under the "Advanced Topic Programming" course at BGU.
+By this project my project partner [`Noa Magrisso`](https://github.com/NoaMagrisso) and I implemented a maze game, as we asked to do under the "Advanced Topic Programming" course at BGU.
 
 You are playing "Tom" and you have to catch Jerry. Please, keep yourself from the walls in the way :)
 If you are getting into trouble, you can be helped by our solution.
